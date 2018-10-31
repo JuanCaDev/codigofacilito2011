@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.contenedor {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 'header           header'
+                       'hero             hero'
+                       'especialidades   destacado'
+                       'footer           footer';
+  grid-template-rows: 180px auto auto auto;
+  grid-template-columns: 60% 40%;
+  margin: 0 10%;                     
+}
+
+.header {
+  grid-area: header;
+  background: black;
+  width: 100%;
+}
+.header .top {
+  height: 120px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.header .top .img {
+  width: 200px;
+  margin: auto 0 auto 40px;
+}
+.header .top span {
+  color: white;
+  margin: auto;
+  font-size: 30px;
+  font-weight: bold;
+}
+.header .navegacion {
+  height: 60px;
+  background: #00A235;
+}
+.header .navegacion ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+}
+.header .navegacion ul li {
+  list-style: none;
+  margin: auto 0;
+}
+.header .navegacion ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 20px 0;
+}
+.header .navegacion ul li a:hover {
+  color: white;
+}
+
+.hero {
+  grid-area: hero;
+  height: 100%;
+}
+
+.hero .img-hero {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  grid-area: especialidades;
+}
+.main .especialidades {
+  height: 100%;
+}
+.titulo {
+  text-align: center;
+}
+.main .contenedor-especialidades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main .contenedor-especialidades .especialidad {
+  width: 200px;
+  height: 100%;
+  margin: 10px;
+}
+.main .contenedor-especialidades .especialidad .logo-especialidad {
+  width: 60px;
+  display: block;
+  margin: 0 auto;
+}
+.main .contenedor-especialidades .especialidad.android {
+  background: #0cb388;
+}
+.main .contenedor-especialidades .especialidad.ruby {
+  background: #ec4b2d;
+}
+.main .contenedor-especialidades .especialidad.javascript {
+  background: #fed500;
+}
+.main .contenedor-especialidades .especialidad.angular {
+  background: #d61509;
+}
+.main .contenedor-especialidades .especialidad.javascript .logo-especialidad {
+  margin: 13px auto;
+}
+.main .contenedor-especialidades .especialidad .titulo-especialidad {
+  font-size: .8em;
+  text-align: center;
+  padding: 4px;
+}
+
+.cursos-destacados {
+  grid-area: destacado;
+}
+.cursos-destacados .contenedor-destacado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cursos-destacados .contenedor-destacado .destacado {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cursos-destacados .contenedor-destacado .destacado .titulo-destacado {
+  font-size: 1em;
+  text-align: center;
+  padding: 4px;
+} 
+
+.cursos-destacados .contenedor-destacado .destacado.php {
+  background: #01579b;
+}
+.cursos-destacados .contenedor-destacado .destacado.javascript {
+  background: #ffb400;
+}
+
+.footer {
+  grid-area: footer;
+  background: #00A235;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 16px;
+}
+.footer .logo {
+  width: 150px;
+}
+.footer .social {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.footer .social img {
+  width: 20px;
+}
